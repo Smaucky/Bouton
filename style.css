@@ -39,6 +39,7 @@ label input {
     width: 60px;
     height: 100%;
     background-color: #ab0e2b;
+    border-radius: 50%;
     transition: 0.5s;
 }
 label input:checked ~ .icon {
