@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.button-slide {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+}
+
+label {
+    position: relative;
+    width: 120px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+label::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    background-color: #444;
+    border-radius: 4px;
+}
+label input {
+    position: absolute;
+    appearance: none;
+}
+.icon {
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background-color: #ab0e2b;
+    transition: 0.5s;
+}
+label input:checked ~ .icon {
+    left: 60px;
+    background-color: #40c927;
+}
+.icon::before {
+    content:  '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+}
+
+@media screen and (max-width: 500px){
+    .button-slide {
+        flex-direction: column;
+    }
+}
